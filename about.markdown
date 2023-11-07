@@ -4,8 +4,9 @@ title: About
 permalink: /about/
 ---
 
-Currently at the [Recurse Center](https://www.recurse.com/) (F1 '23), focusing on improving the 
-Windows port for WebKit. May also do some Rust things.
+At the [Recurse Center](https://www.recurse.com/) (F1 '23), I focused on improving the 
+Windows port for WebKit. Made progress on enabling webassembly and the FTL JIT, gave a lightning
+talk at the 2023 WebKit Contributors Meeting.
 
 Previously a Principal Engineer / Architect at [Atlassian](https://www.atlassian.com/),
 primarily worked on Trello, Confluence and Jira. Also wrote some code in Bitbucket Server + Cloud, 
