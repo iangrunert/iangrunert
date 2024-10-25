@@ -4,6 +4,8 @@ title: About
 permalink: /about/
 ---
 
+Currently working on [WebKit](https://webkit.org/) for Pax Andromeda, mostly on the Windows port.
+
 At the [Recurse Center](https://www.recurse.com/) (F1 '23), I focused on improving the 
 Windows port for WebKit. Made progress on enabling webassembly and the FTL JIT, gave a lightning
 talk at the 2023 WebKit Contributors Meeting.
