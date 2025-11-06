@@ -17,9 +17,9 @@ Linux / Mac for JSC performance. After [enabling every tier of JIT]({% post_url
 different about the Windows port that could explain why it didn't achieve 
 similar JetStream scores to the other ports on the same hardware.
 
-In chasing this I made some smaller changes, like [enabled LTO mode for release builds](https://github.com/WebKit/WebKit/pull/35220), and
+In chasing this I made some smaller changes, like [enabling LTO mode for release builds](https://github.com/WebKit/WebKit/pull/35220), and
 [removing differences in the GC controller](https://github.com/WebKit/WebKit/pull/41688), and 
-[enabled the periodic memory monitor](https://github.com/WebKit/WebKit/pull/49892).
+[enabling the periodic memory monitor](https://github.com/WebKit/WebKit/pull/49892).
 
 I also [ported libpas to Windows](https://github.com/WebKit/WebKit/pull/41945),
 WebKit's custom memory allocator. This was a larger change; and it took some iteration 
@@ -59,7 +59,9 @@ but I suspect it'd be substantially more expensive for the same hardware.
 Setting these up and ongoing maintenance has generated a steady stream of busywork. 
 We've been struggling with reliability on win-tests for a number of reasons - first 
 due to the work on libpas / commit space issues, but there's been ongoing reliability 
-problems for a variety of reasons.
+problems for a variety of reasons. After recent changes to increase the available disk space 
+and deal with phantom locked DLLs when cleaning the WebKitBuild directory, the tests are 
+currently green - but the price of green CI is eternal vigilance.
 
 ## Next Year
 
@@ -108,8 +110,8 @@ feels large and nebulous. GStreamer supports Windows on paper, so it's likely I'
 that path for `MEDIA_STREAM` in pursuit of port alignment. I don't know how well maintained 
 the Windows support for GStreamer is in practice, or how awkward it'd be to enable.
 
-Improving our use of Skia in the Windows port would be good to look at. `COORDINATED_GRAPHICS` i
-s disabled on Windows, which means the Windows port hasn't benefited as much as it could from 
+Improving our use of Skia in the Windows port would be good to look at. `COORDINATED_GRAPHICS` is 
+disabled on Windows, which means the Windows port hasn't benefited as much as it could from 
 Igalia's ongoing work in this area. Either we could enable `COORDINATED_GRAPHICS` for Windows, 
 or figure out alternate ways to improve our render pipeline. Site Isolation is another motivating 
 factor - sharing more of the render pipeline might mean we can share more of the changes to 
