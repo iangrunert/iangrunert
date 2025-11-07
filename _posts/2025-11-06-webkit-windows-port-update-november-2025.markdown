@@ -1,13 +1,14 @@
 ---
 layout: post
-title:  "WebKit Windows Port Update - October 2025"
+title:  "WebKit Windows Port Update - November 2025"
 ---
 
 Just finished attending my third WebKit Contributors meeting, and there were a
 number of questions regarding the status of the Windows port. Seems worthwhile 
 to post an update here, as I didn't give a lightning talk this year.
 
-If you have any questions - feel free to reach out via the WebKit Slack or email.
+If you have any questions; or if you’d like to join my team and work on/with WebKit (remote US) - 
+reach out via the WebKit Slack or email.
 
 ### Recap
 
@@ -98,12 +99,10 @@ to reach similar test results to the WPE port.
 There's work to keep on top of enabling new (and old) features in the Windows port - I'm aware 
 of the Navigation API for one, but there's definitely more.
 
-## Beyond?
+## Long term plans
 
 There's things I'm interested in for the Windows port, that due to time constraints 
 I'm personally less likely to get to within the next year.
-
-Site Isolation will require significant changes, and it's unclear I'll get the time to do so.
 
 It'd be good to enable `MEDIA_STREAM` and `WEBRTC` for the Windows port - but this project 
 feels large and nebulous. GStreamer supports Windows on paper, so it's likely I'd go down 
