@@ -10,7 +10,7 @@ to post an update here, as I didn't give a lightning talk this year.
 If you have any questions; or if you’d like to join my team and work on/with WebKit (remote US) - 
 reach out via the WebKit Slack or email.
 
-### Recap
+### 2025 Recap
 
 I spent some time this year looking at differences between the Windows port and 
 Linux / Mac for JSC performance. After [enabling every tier of JIT]({% post_url 
@@ -68,9 +68,9 @@ currently green - but the price of green CI is eternal vigilance.
 
 My hope is to attract new contributors to the Windows port. Short term it's
 likely to happen via hiring additional people on my team to work on WebKit. 
-Longer term ideally the port will improve such that it becomes a viable 
+Longer term, ideally the Windows port will improve such that it becomes a viable 
 (and attractive) technology choice. With that in mind, I'll run through an 
-unordered list of things I'd like to work on in the coming year.
+unordered list of things I'd like to work on in the upcoming year.
 
 There's a few smaller changes to make to improve performance - re-landing the 
 runloop changes, fixing and re-enabling wasm fast memory, and switching libpas from
