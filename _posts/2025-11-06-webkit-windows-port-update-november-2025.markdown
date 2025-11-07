@@ -10,7 +10,7 @@ to post an update here, as I didn't give a lightning talk this year.
 If you have any questions; or if you’d like to join my team and work on/with WebKit (remote US) - 
 reach out via the WebKit Slack or email.
 
-### 2025 Recap
+## Year in review
 
 I spent some time this year looking at differences between the Windows port and 
 Linux / Mac for JSC performance. After [enabling every tier of JIT]({% post_url 
@@ -64,7 +64,7 @@ problems for a variety of reasons. After recent changes to increase the availabl
 and deal with phantom locked DLLs when cleaning the WebKitBuild directory, the tests are 
 currently green - but the price of green CI is eternal vigilance.
 
-## Next Year
+## Plans for 2026
 
 My hope is to attract new contributors to the Windows port. Short term it's
 likely to happen via hiring additional people on my team to work on WebKit. 
@@ -121,7 +121,7 @@ in using Dawn for this, as it'd also open up the possibility of using the [Graph
 for Skia](https://blog.chromium.org/2025/07/introducing-skia-graphite-chromes.html) which has a 
 dependency on Dawn.
 
-## Until Next Time
+## Until next time
 
 Reflecting on this years contributors meeting, I'm really excited about the future of the 
 WebKit project. There's some truly innovative and cutting-edge work happening in WebKit, and 
