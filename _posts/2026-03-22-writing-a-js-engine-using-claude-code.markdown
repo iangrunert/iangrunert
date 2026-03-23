@@ -41,10 +41,10 @@ Inspired by this blog from Planetscale, [Faster interpreters in Go: Catching up 
 by Vicent Martí, the bytecode is a slice of function pointers to each instruction. 
 I'd be curious to experiment with switching to a traditional bytecode interpreter
 loop (in pure Go, this'd be a giant switch statement) to do an apples-to-apples 
-performance comparison. There's other downsides too - it's more difficult to 
-cache compiled bytecode (currently unimplemented). We can't serialize the 
-function pointers - we'd have to serialize a command list to regenerate the 
-functions at startup.
+performance comparison. This approach means it's more difficult to cache 
+compiled bytecode (currently unimplemented). We can't serialize the function 
+pointers - we'd have to serialize a command list to regenerate the functions at 
+startup.
 
 Some performance work was done along the way to make Test262 run quicker, and 
 to make a small set of V8 benchmarks at least run; but not a lot of work was done.
@@ -57,8 +57,9 @@ There's only one Go dependency beyond the stdlib - we use
 `golang.org/x/text/unicode/norm` for String.normalize. 
 
 There's one C dependency via cgo - we're using libregexp from QuickJS as the 
-regexp engine. I did try to get an agent to swap it out, but it wasn't given 
-sufficient guardrails to make good progress.
+regexp engine. I did try to get an agent to replace it, but it wasn't given 
+sufficient guardrails to make good progress. I'll likely attempt to do so again 
+in the future.
 
 Currently skipping tests for Temporal, Intl, and a handful of tests for unicode
 as Go 1.26 only supports up to Unicode 15.0.0. This will be resolved in Go 1.27 
